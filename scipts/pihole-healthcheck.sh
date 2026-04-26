@@ -16,6 +16,10 @@
 #   --dry-run Report container status only; no exec or recovery actions taken
 # =============================================================================
 
+# Ensure consistent PATH regardless of how the script is invoked (cron, shell, etc.)
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+
 # Strict mode — see inline comments for intentional non-zero guard patterns
 set -euo pipefail
 
